@@ -1,0 +1,19 @@
+GPU enabling...
+Loading model
+Loading Testing dataset: 
+ Dos       6000
+normal    6000
+Probe     3494
+R2L        298
+U2R         16
+Name: Label, dtype: int64 
+
+Preparing test_dl...
+Predicting...
+██Accuracy: 99.36%; precision: 99.35%; F1: 99.35%; Recall: 99.36%; roc-auc: 99.96%; elapsed: 12.56 s
+█Confusion Matrix:
+ [[5999    1    0    0    0]
+ [   0 3462    0    0   32]
+ [   0    0  271    1   26]
+ [   0    0    1   10    5]
+ [  10   15    9    1 5965]]
