@@ -15,11 +15,11 @@ import pickle
 warnings.filterwarnings("ignore")
 from fastai.tabular.all import *
 
-dataPath = ('/Volumes/D/NCS_2021-2023/DGID/dataset/CIC_2019/dataset/')
-modelPath = '/Volumes/D/NCS_2021-2023/DGID/10_2/'
+dataPath = ('/dataset/')
+modelPath = '/models/'
 fileName = 'train.csv'
-df_train = pd.read_csv('/Volumes/D/NCS_2021-2023/DGID/dataset/CIC_2019/dataset/train.csv')
-df_test = pd.read_csv('/Volumes/D/NCS_2021-2023/safecomp/CIC-2018-best/test.csv')
+df_train = pd.read_csv('train.csv')
+df_test = pd.read_csv('test.csv')
 
 labels = ['SQL Injection', 'Infilteration', 'DoS attacks-SlowHTTPTest','DoS attacks-GoldenEye', 'Bot', 'DoS attacks-Slowloris','Brute Force -Web', 'DDOS attack-LOIC-UDP', 'Benign','Brute Force -XSS']
 
@@ -51,7 +51,7 @@ procs = [Categorify, FillMissing, Normalize]
 y_block = CategoryBlock()
 
 print("Loading model")
-gmodel = load_learner('/Volumes/D/NCS_2021-2023/safecomp/models/DLID1')
+gmodel = load_learner('DLID1')
 data = df_test
 data[y_names] = data[y_names].astype('category')
 print("Loading Testing dataset: \n",data[y_names].value_counts(), "\n")
